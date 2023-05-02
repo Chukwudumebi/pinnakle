@@ -10,8 +10,95 @@ import {
 import { motion } from "framer-motion";
 import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
 import Books from "./Books";
+import { image1 } from "@/assets";
+const Card = ({ item }: any) => {
+  return (
+    <div className=" rounded-lg overflow-hidden p-3 bg-gray-100 border shadow-sm mb-5">
+      <button className=" bg-green-600">
+        Get it by Friday{item.date2Buy}
+      </button>
+      <div className="h-80">
+        <img className="h-full w-full" src={item.image} alt="image" />
+      </div>
+      <p>{ item.price}</p>
+    </div>
+  );
+}
 
-const books: Array<BookType> = [
+const books: Array<BookType|any> = [
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  {
+    image: image1,
+    date2Buy: 'Friday',
+    certification: 'CALLBYm',
+    price: 355990
+  },
+  /*
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
     title: "State of the Art Facilities",
@@ -30,6 +117,7 @@ const books: Array<BookType> = [
     description:
       "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
   },
+  */
 ];
 
 const container = {
@@ -70,7 +158,8 @@ const Book = () => {
           animate="visible"
         >
           {books.map((book, index) => (
-            <Books key={index} {...book} />
+            // <Books key={index} {...book} />
+            <Card item = {book}/>
           ))}
         </motion.div>
       </motion.div>
