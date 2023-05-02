@@ -55,7 +55,7 @@ const Book = () => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <HText>MORE THAN JUST GYM.</HText>
+          <HText>Get the Latest and high quality Medical Text</HText>
           <p className="my-5 text-sm">
             We provide world class fitness equipment, trainers and classes to
             get you to your ultimate f

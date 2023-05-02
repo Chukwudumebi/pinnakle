@@ -1,3 +1,5 @@
+
+/**** The Fourth iteration */
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
@@ -12,7 +14,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
   const navbarBackground = isTopOfPage
-    ? "secondary-400"
+    ? "bg-secondary-400"
     : "bg-secondary-400 drop-shadow";
   const navigate = useNavigate();
 
@@ -38,7 +40,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
         className={`\${navbarBackground} fixed top-0 z-30 flex w-full items-center justify-between py-6`}
       >
         <div className="mx-auto flex w-5/6 items-center justify-between">
-          <div className="flex items-center gap-8">
+          <div className="flex rounded-md items-center gap-8">
             <img alt="logo" src={Logo} />
           </div>
           {isAboveMediumScreens ? (

@@ -1,22 +1,39 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-type Props = {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   to: string;
-};
+}
 
-const ActionButton = ({ children, to }: Props) => {
-  const navigate = useNavigate();
-
+const ActionButton: React.FC<Props> = ({ children, to, ...rest }) => {
   return (
-    <button
-      className="hover:bg-secondary-500 rounded-full bg-primary-500 px-10 hover:text-white"
-      onClick={() => navigate(to)}
+    <Link
+      to={to}
+      className="rounded-md bg-secondary-400 px-6 py-3 text-white"
+      {...rest}
     >
       {children}
-    </button>
+    </Link>
   );
 };
 
 export default ActionButton;
+
+// import React from "react";
+// import { Link } from "react-router-dom";
+
+// interface Props {
+//   children: React.ReactNode;
+//   to: string;
+// }
+
+// const ActionButton: React.FC<Props> = ({ children, to }) => {
+//   return (
+//     <Link to={to} className="rounded-md bg-secondary-400 px-6 py-3 text-white">
+//       {children}
+//     </Link>
+//   );
+// };
+
+// export default ActionButton;

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.png";
+import ContactUsPageGraphic from "@/assets/ContactUsPageGraphic.jpg";
 import HText from "@/shared/HText";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300
+  const inputStyles = `mb-5 w-full rounded-lg bg-secondary-400
   px-5 py-3 placeholder-white`;
 
   const {
