@@ -11,7 +11,6 @@
 // import Books from "./Books";
 // import { image1 } from "@/assets";
 
-
 // const Card = ({ item }: any) => {
 //   return (
 //     <div className="mb-5 flex flex-col overflow-hidden rounded-lg border bg-primary-500 shadow-sm">
@@ -171,16 +170,19 @@ import { image1 } from "@/assets";
 
 const Card = ({ item }: any) => {
   return (
-    <div className="mb-5 flex flex-col overflow-hidden rounded-lg border bg-primary-500 shadow-sm">
-      <div className="h-80 w-80">
-        <img className="h-full w-full" src={item.image} alt="image" />
-      </div>
-      <div className="ml-4 flex flex-row justify-between">
-        <div>
-          <p className="text-lg font-bold">{item.certification}</p>
-          <p className="text-sm text-gray-500">Price: {item.price}</p>
+    <div className="mb-5 flex h-fit w-80 flex-col overflow-hidden rounded-lg border px-3 py-3 shadow-sm transition-all duration-500  hover:scale-105">
+      <div className="relative">
+        <div className="absolute flex h-full w-full items-center justify-center text-transparent text-white transition-all duration-500 hover:bg-[#00adee4f] hover:text-white">
+          <p>Something random</p>
         </div>
-        <button className="rounded bg-green-600 px-4 py-2">
+        <img className="h-full w-full " src={item.image} alt="image" />
+      </div>
+      {/* <p className=" font-bold">{item.certification}</p> */}
+      <div className="flex flex-row justify-between pt-3">
+        <button className="rounded px-2 text-xs shadow-sm shadow-primary-500 transition-all duration-500 hover:scale-105 hover:bg-primary-500 hover:text-white">
+          <p className="">Price: {item.price}</p>
+        </button>
+        <button className="h-fit rounded bg-green-600 px-2 py-2 text-xs text-white transition-all  hover:scale-105 hover:bg-white hover:text-green-600 hover:shadow-sm hover:shadow-green-600">
           Get it by {item.date2Buy}
         </button>
       </div>

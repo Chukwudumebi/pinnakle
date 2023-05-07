@@ -44,7 +44,7 @@ const Navbar = ({ isTopOfPage }: Props) => {
         } py-6`}
       >
         <div className="mx-auto flex w-5/6 items-center justify-between">
-          <div className="flex rounded-md items-center gap-8">
+          <div className="flex items-center gap-8 rounded-md">
             <img alt="logo" src={Logo} />
           </div>
           {isAboveMediumScreens ? (
@@ -58,7 +58,9 @@ const Navbar = ({ isTopOfPage }: Props) => {
           ) : (
             <>
               <MenuIcon
-                className="h-8 w-8 text-secondary-400"
+                className={`h-8 w-8 ${
+                  y === 0 ? "text-white " : "text-secondary-400"
+                }`}
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               />
               {isMenuToggled && (
